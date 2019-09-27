@@ -52,7 +52,7 @@ func ConvertFloatStringToBigInt(amount string, decimals int) (*big.Int, error) {
 	//	return nil, err
 	//}
 
-	if decimals <= 0 || decimals > 30 {
+	if decimals < 0 || decimals > 30 {
 		return nil, errors.New("wrong decimal input through")
 	}
 
@@ -97,7 +97,7 @@ func ConvertAmountToFloatDecimal(amount string, decimals int) (decimal.Decimal, 
 		return d, err
 	}
 
-	if decimals <= 0 || decimals > 30 {
+	if decimals < 0 || decimals > 30 {
 		return d, errors.New("wrong decimal input through ")
 	}
 
