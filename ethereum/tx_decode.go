@@ -1188,6 +1188,7 @@ func (this *EthTransactionDecoder) CreateErc20TokenSummaryRawTransaction(wrapper
 				rawTx := &openwallet.RawTransaction{
 					Coin:    supportCoin,
 					Account: feesSupportAccount,
+					FeeRate:sumRawTx.FeeRate,
 					To: map[string]string{
 						addrBalance.Balance.Address: supportAmount.String(),
 					},
